@@ -3,7 +3,12 @@
 Never tun pacman -Sy on your system
 pacman -Sy dialog
 timedatectl set-ntp true
-cp config_template.json /tmp/config.json
+
+curl https://raw.githubusercontent.com/markoc1120\
+/arch_installer/main/config.json > /tmp/config.json
+
+curl https://raw.githubusercontent.com/markoc1120\
+/arch_installer/main/creds.json > /tmp/creds.json
 
 dialog --defaultno --title "Are you sure?" --yesno \
 "This is my personnal arch linux install. \n\n\
@@ -28,6 +33,50 @@ WARNING: Everything will be DESTROYED on the hard disk!" \
 hd=$(cat hd) && rm hd
 hd=$(echo "$hd" | sed 's#/#\\/#g')
 sed -i "s/%hd/$hd/g" /tmp/config.json
+
+function config_user() {
+    if [ -z "$1" ]; then
+        dialog --no-cancel --inputbox "Please enter your user name." \
+            10 60 2> name
+     else
+        echo "$1" > name
+    fi
+
+    dialog --no-cancel --passwordbox "Enter your password." \
+        10 60 2> pass1
+    dialog --no-cancel --passwordbox "Confirm your password." \
+        10 60 2> pass2
+
+    while [ "$(cat pass1)" != "$(cat pass2)" ]
+    do
+        dialog --no-cancel --passwordbox \
+            "The passwords do not match.\n\nEnter your password again." \
+            10 60 2> pass1
+        dialog --no-cancel --passwordbox \
+            "Retype your password." \
+            10 60 2> pass2
+    done
+
+    name=$(cat name) && rm name
+    pass1=$(cat pass1) && rm pass1 pass2
+
+}
+
+dialog --title "Root password" \
+    --msgbox "It's time to add a password for the root user" \
+    10 60
+config_user root
+sed -i "s/%root_pw/$pass1/g" /tmp/creds.json
+
+dialog --title "Add user" \
+    --msgbox "Let's create another user." \
+    10 60
+config_user
+sed -i "s/%username/$name/g" /tmp/creds.json
+sed -i "s/%user_pw/$pass1/g" /tmp/creds.json
+echo "$name" > /tmp/user_name
+
+archinstall --config /tmp/config.json --creds /tmp/creds.json
 
 dialog --title "Continue installation" --yesno \
 "Do you want to install all your apps and your dotfiles?" \
