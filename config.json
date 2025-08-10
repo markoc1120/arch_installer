@@ -35,15 +35,15 @@
                                 "unit": "B",
                                 "value": 512
                             },
-                            "unit": "MiB",
-                            "value": 512
+                            "unit": "B",
+                            "value": 536870912
                         },
                         "start": {
                             "sector_size": {
                                 "unit": "B",
                                 "value": 512
                             },
-                            "unit": "MiB",
+                            "unit": "B",
                             "value": 1
                         },
                         "status": "create",
@@ -62,16 +62,16 @@
                                 "unit": "B",
                                 "value": 512
                             },
-                            "unit": "Percent",
-                            "value": 100
+                            "unit": "B",
+                            "value": "%totalsize"
                         },
                         "start": {
                             "sector_size": {
                                 "unit": "B",
                                 "value": 512
                             },
-                            "unit": "MiB",
-                            "value": 512
+                            "unit": "B",
+                            "value": 536870913
                         },
                         "status": "create",
                         "type": "primary"
