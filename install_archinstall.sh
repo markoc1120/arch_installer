@@ -76,7 +76,8 @@ sed -i "s/%username/$name/g" /tmp/creds.json
 sed -i "s/%user_pw/$pass1/g" /tmp/creds.json
 echo "$name" > /tmp/user_name
 
-archinstall --config /tmp/config.json --creds /tmp/creds.json
+dialog --msgbox "Configuring the system. Please wait..." 10 60
+archinstall --silent --config /tmp/config.json --creds /tmp/creds.json
 
 dialog --title "Continue installation" --yesno \
 "Do you want to install all your apps and your dotfiles?" \
