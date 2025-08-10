@@ -31,12 +31,18 @@
                         "mountpoint": "/boot",
                         "obj_id": "a82416f1-3d59-4e6b-aaab-39e567342121",
                         "size": {
-                            "sector_size": null,
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
                             "unit": "MiB",
                             "value": 512
                         },
                         "start": {
-                            "sector_size": null,
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
                             "unit": "MiB",
                             "value": 1
                         },
@@ -52,12 +58,18 @@
                         "mountpoint": "/",
                         "obj_id": "0ff89ef3-24e9-4ecc-8d7c-69e4d51b77bb",
                         "size": {
-                            "sector_size": null,
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
                             "unit": "Percent",
                             "value": 100
                         },
                         "start": {
-                            "sector_size": null,
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
                             "unit": "MiB",
                             "value": 512
                         },
