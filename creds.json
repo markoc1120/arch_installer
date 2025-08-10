@@ -2,10 +2,10 @@
     "users": [
         {
             "sudo": true,
-            "username": "markoc1120",
-            "enc_password": ""
+            "username": "%username",
+            "enc_password": "%user_pw"
 
         }
     ],
-    "root_enc_password": ""
+    "root_enc_password": "%root_pw"
 }
