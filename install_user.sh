@@ -40,7 +40,7 @@ do
     aur_check "$line"
 done
 
-DOTFILES="/home/$(whoami)/dotfiles"
+DOTFILES="/home/$(whoami)/src/dotfiles"
 if [ ! -d "$DOTFILES" ]; then
     git clone https://github.com/markoc1120/dotfiles.git \
     "$DOTFILES" >/dev/null
