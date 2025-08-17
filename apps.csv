@@ -4,6 +4,9 @@ essential,man,Manual
 essential,man-pages,Manual pages
 network,openssh,Remote login tool for SSH protocol
 network,networkmanager,Network manager
+tools,zathura,Minimalistict document viewer
+tools,zathura-pdf-mupdf,PDF plugin for zathura
+tools,pipewire,low-level multimedia framework
 tools,rsync,Synchronizing files across computers
 tools,arandr,xrandr GUI
 tools,xsel,Manipulate the X selection
@@ -29,7 +32,8 @@ i3,i3status,i3 status bar
 i3,i3lock,i3 lock monitor
 i3,dmenu,Dynamic menu for X
 i3,feh,X11 image viewer
-i3,arc-gtk-theme,Desktop themes
+i3,imagemagick,creating blurry effect for lockscreen
+i3,scrot,creating blurry effect for lockscreen
 zsh,zsh,Unix shell (Z-Shell)
 zsh,zsh-completions,Additional completions for Zsh
 zsh,zsh-syntax -highlighting,Syntax highlighting for ZSH
