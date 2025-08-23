@@ -21,6 +21,7 @@ tools,gcc,GNU Compiler Collection
 tools,make,GNU make utility to maintain groups of programs
 tools,unzip,For extracting and viewing files in .zip archives
 tools,fd,Simple fast and user-friendly alternative to find
+tools,redshift,adjusting screen's temperature
 tmux,tmux,Terminal multiplexer
 tmux,tmuxp,Configure tmux session + windows + panes via config files
 notifier,dunst,Notification system
