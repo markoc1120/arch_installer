@@ -1,5 +1,3 @@
-essential,xorg,X server
-essential,xorg-xinit,Display server boot
 essential,man,Manual
 essential,man-pages,Manual pages
 network,openssh,Remote login tool for SSH protocol
@@ -9,36 +7,39 @@ tools,zathura-pdf-mupdf,PDF plugin for zathura
 tools,pipewire,low-level multimedia framework
 tools,rsync,Synchronizing files across computers
 tools,arandr,xrandr GUI
-tools,xsel,Manipulate the X selection
 tools,fzf,Command line fuzzy finder
 tools,scrot,Screenshot software
 tools,udiskie,Automount devices
 tools,lxappearance,Theme switcher for GTK+
-tools,xcape,Configure modifier keys to act as other keys
 tools,ripgrep,Faster alternative to grep
-tools,htop,Interactive process viewer
+tools,btop,Interactive process viewer
 tools,gcc,GNU Compiler Collection
 tools,make,GNU make utility to maintain groups of programs
 tools,unzip,For extracting and viewing files in .zip archives
 tools,fd,Simple fast and user-friendly alternative to find
-tools,redshift,adjusting screen's temperature
+tools,wlsunset,adjusting screen's temperature
+tools,interception-caps2esc,switching Caps to Esc/Ctrl
+tools,cliphist,wayland clipboard manager
+tools,wl-clipboard,wayland copy and paste utilities
+tools,kitty,terminal emulator -> displaying images in the terminal
 tmux,tmux,Terminal multiplexer
 tmux,tmuxp,Configure tmux session + windows + panes via config files
-notifier,dunst,Notification system
-notifier,libnotify,Notifier
+notifier,mako,Notification system
 git,git,Version control system
 git,diff-so-fancy,Human readable git diff
-i3,i3-wm,i3 window tile manager
-i3,i3status,i3 status bar
-i3,i3lock,i3 lock monitor
-i3,dmenu,Dynamic menu for X
-i3,feh,X11 image viewer
-i3,imagemagick,creating blurry effect for lockscreen
-i3,scrot,creating blurry effect for lockscreen
+sway,sway,tiling Wayland compositor (window manager)
+sway,swaybg,Wayland background
+sway,rofi,app launcher
+sway,waybar,status bar
+sway,autotiling,script for automatically switching horizontal/vertical orientation
+sway,swaylock,lock monitor
+sway,swayidle,idle manager
+sway,imagemagick,creating blurry effect for lockscreen
+sway,grim,creating blurry effect for lockscreen
 zsh,zsh,Unix shell (Z-Shell)
 zsh,zsh-completions,Additional completions for Zsh
 zsh,zsh-syntax-highlighting,Syntax highlighting for ZSH
 neovim,neovim,Editor... and much more
-urxvt,rxvt-unicode,Terminal Urxvt
-urxvt,urxvt-tabbedex -mina86 -git,Improved tabs for Urxvt (AUR)
+ghostty, ghostty, modern terminal emulator
 brave,brave-bin,Brave browser (AUR)
+discord,discord-canary, discord (AUR)

@@ -27,6 +27,29 @@ echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
 locale -gen
 echo "LANG=en_US.UTF-8" > /etc/locale.conf
 
+# set up Capslock rebinding to Esc/Ctrl
+cat > /etc/udevmon.yaml << 'EOF'
+- JOB: "intercept -g $DEVNODE | caps2esc | uinput -d $DEVNODE"
+  DEVICE:
+    EVENTS:
+      EV_KEY: [KEY_CAPSLOCK, KEY_ESC]
+EOF
+
+cat > /etc/systemd/system/udevmon.service << 'EOF'
+[Unit]
+Description=udevmon
+Wants=systemd-udev-settle.service
+After=systemd-udev-settle.service
+
+# Use `nice` to start the `udevmon` program with very high priority,
+# using `/etc/udevmon.yaml` as the configuration file
+[Service]
+ExecStart=/usr/bin/nice -n -20 /usr/bin/udevmon -c /etc/udevmon.yaml
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
 function config_user() {
     if [ -z "$1" ]; then
         dialog --no-cancel --inputbox "Please enter your user name." \

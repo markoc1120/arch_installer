@@ -65,6 +65,8 @@ echo "$packages" | while read -r line; do
 
     if [ "$line" = "networkmanager" ]; then
         systemctl enable NetworkManager.service
+    elif [ "$line" = "interception-caps2esc" ]; then
+        systemctl enable udevmon.service
     fi
 done
 
