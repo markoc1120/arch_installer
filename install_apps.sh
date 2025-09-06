@@ -17,11 +17,12 @@ apps=("essential" "Essentials" on
     "tmux" "Tmux" on
     "notifier" "Notification tools" on
     "git" "Git & git tools" on
-    "i3" "i3 wm" on
+    "sway" "sway wm" on
     "zsh" "The Z-Shell (zsh)" on
     "neovim" "Neovim" on
-    "urxvt" "URxvt" on
-    "brave" "Brave (browser)" on)
+    "ghostty" "Ghostty terminal" on
+    "brave" "Brave (browser)" on
+    "discord" "Discord" on)
 
 dialog --checklist \
 "You can now choose what group of application you want to install. \n\n\
