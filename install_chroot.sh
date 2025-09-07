@@ -9,7 +9,7 @@ pacman -S --noconfirm grub
 
 if [ "$uefi" = 1 ]; then
     pacman -S --noconfirm efibootmgr
-    grub-install --target=x86_64 -efi \
+    grub-install --target=x86_64-efi \
         --bootloader-id=GRUB \
         --efi-directory=/boot/efi
 else
@@ -78,7 +78,7 @@ function config_user() {
 
     # Create user if doesn't exist
     if [[ ! "$(id -u "$name" 2> /dev/null)" ]]; then
-        useradd -m -g wheel -s /bin/bash "$name"
+        useradd -m -g wheel seat -s /bin/bash "$name"
     fi
 
     # Add password to user
