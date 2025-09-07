@@ -53,7 +53,7 @@ hderaser=$(cat eraser); rm eraser
 
 function eraseDisk() {
     case $1 in
-        1) dd if=/dev/zero of="$hd" status=progress 2>&1 \
+        1) dd if=/dev/zero of="$hd" bs=32M status=progress 2>&1 \
             | dialog \
             --title "Formatting $hd..." \
             --progressbox --stdout 20 60;;
