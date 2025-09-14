@@ -78,7 +78,7 @@ function config_user() {
 
     # Create user if doesn't exist
     if [[ ! "$(id -u "$name" 2> /dev/null)" ]]; then
-        useradd -m -g wheel seat -s /bin/bash "$name"
+        useradd -m -g wheel -G seat -s /bin/bash "$name"
     fi
 
     # Add password to user
