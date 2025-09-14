@@ -21,6 +21,7 @@ tools,wlsunset,adjusting screen's temperature
 tools,interception-caps2esc,switching Caps to Esc/Ctrl
 tools,cliphist,wayland clipboard manager
 tools,wl-clipboard,wayland copy and paste utilities
+tools,postgresql,Database for development purposes
 tmux,tmux,Terminal multiplexer
 tmux,tmuxp,Configure tmux session + windows + panes via config files
 notifier,mako,Notification system
