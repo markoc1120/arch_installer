@@ -21,7 +21,17 @@ tools,wlsunset,adjusting screen's temperature
 tools,interception-caps2esc,switching Caps to Esc/Ctrl
 tools,cliphist,wayland clipboard manager
 tools,wl-clipboard,wayland copy and paste utilities
-tools,postgresql,Database for development purposes
+tools,pip,global pip
+tools,jq,json processor
+tools,uv,An extremely fast Python package installer and resolver
+tools,nodejs,Node
+desktop_pipewire,wireplumber,session and policy manager for pipwire
+desktop_pipewire,pipewire-pulse,pipewire dep
+desktop_pipewire,pipewire-alsa,pipewire dep
+desktop_pipewire,pipewire-jack,pipewire dep
+desktop_pipewire,rtkit,pipewire dep
+desktop_pipewire,sof-firmware,pipewire dep
+desktop_pipewire,alsa-utils,pipewire dep
 tmux,tmux,Terminal multiplexer
 tmux,tmuxp,Configure tmux session + windows + panes via config files
 notifier,mako,Notification system
@@ -36,11 +46,16 @@ sway,swaylock,lock monitor
 sway,swayidle,idle manager
 sway,imagemagick,creating blurry effect for lockscreen
 sway,grim,creating blurry effect for lockscreen
+sway,xorg-xwayland,run X clients under wayland
 zsh,zsh,Unix shell (Z-Shell)
 zsh,zsh-completions,Additional completions for Zsh
 zsh,zsh-syntax-highlighting,Syntax highlighting for ZSH
+db,postgresql,Database for development purposes
+db,goose,db migration tool
+db,sqlc,Compile SQL to type-safe Go
 neovim,neovim,Editor... and much more
 ghostty, ghostty, modern terminal emulator
 ghostty,kitty,terminal emulator -> displaying images in the terminal
 brave,brave-bin,Brave browser (AUR)
 discord,discord-canary, discord (AUR)
+discord,electron,apps for websites

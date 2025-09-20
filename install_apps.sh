@@ -22,6 +22,8 @@ apps=("essential" "Essentials" on
     "neovim" "Neovim" on
     "ghostty" "Ghostty terminal" on
     "brave" "Brave (browser)" on
+    "db" "Database and related apps" on
+    "desktop_pipewire" "Pipewire dependencies for desktop" off
     "discord" "Discord" on)
 
 dialog --checklist \
