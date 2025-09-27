@@ -61,3 +61,4 @@ ghostty,kitty,terminal emulator -> displaying images in the terminal
 brave,brave-bin,Brave browser (AUR)
 discord,discord-canary, discord (AUR)
 discord,electron,apps for websites
+ai,opencode-bin,AI coding agent for the terminal

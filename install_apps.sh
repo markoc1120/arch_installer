@@ -25,7 +25,7 @@ apps=("essential" "Essentials" on
     "db" "Database and related apps" on
     "desktop_pipewire" "Pipewire dependencies for desktop" off
     "discord" "Discord" on
-    "rust" "rustup" on)
+    "ai" "AI related packages" on)
 
 dialog --checklist \
 "You can now choose what group of application you want to install. \n\n\
