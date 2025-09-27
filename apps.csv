@@ -26,6 +26,7 @@ tools,jq,json processor
 tools,uv,An extremely fast Python package installer and resolver
 tools,nodejs,Node
 tools,npm,npm package manager
+tools,rust,rust
 desktop_pipewire,wireplumber,session and policy manager for pipwire
 desktop_pipewire,pipewire-pulse,pipewire dep
 desktop_pipewire,pipewire-alsa,pipewire dep
@@ -60,4 +61,3 @@ ghostty,kitty,terminal emulator -> displaying images in the terminal
 brave,brave-bin,Brave browser (AUR)
 discord,discord-canary, discord (AUR)
 discord,electron,apps for websites
-rust,,
