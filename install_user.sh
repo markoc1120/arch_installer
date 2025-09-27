@@ -23,12 +23,6 @@ install_paru() {
     rm -rf paru
 }
 
-# install_rust() {
-#     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh 
-#     . "$HOME/.cargo/env"
-#     rustup default stable
-# }
-
 aur_check() {
     qm=$(pacman -Qm | awk '{print $1}')
     for arg in "$@"
@@ -39,8 +33,6 @@ aur_check() {
         fi
     done
 }
-# dialog --infobox "Installing Rust (required for paru)..." 10 60
-# install_rust
 
 dialog --infobox "Installing \"Paru\", an AUR helper..." 10 60
 install_paru
