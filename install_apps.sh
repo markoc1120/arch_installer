@@ -24,7 +24,8 @@ apps=("essential" "Essentials" on
     "brave" "Brave (browser)" on
     "db" "Database and related apps" on
     "desktop_pipewire" "Pipewire dependencies for desktop" off
-    "discord" "Discord" on)
+    "discord" "Discord" on
+    "rust" "rustup" on)
 
 dialog --checklist \
 "You can now choose what group of application you want to install. \n\n\
@@ -64,9 +65,7 @@ echo "$packages" | while read -r line; do
     if [ "$line" = "zsh" ]; then
         # Set Zsh as default terminal for our user
         chsh -s "$(which zsh)" "$name"
-    fi
-
-    if [ "$line" = "networkmanager" ]; then
+    elif [ "$line" = "networkmanager" ]; then
         systemctl enable NetworkManager.service
     elif [ "$line" = "interception-caps2esc" ]; then
         systemctl enable udevmon.service

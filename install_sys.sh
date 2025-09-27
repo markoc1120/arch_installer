@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Never tun pacman -Sy on your system
+# Never run pacman -Sy on your system
 pacman -Sy dialog
 timedatectl set-ntp true
 

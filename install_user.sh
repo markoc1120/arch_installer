@@ -13,20 +13,35 @@ aur_install() {
     && rm -rf "$1" "$1.tar.gz" ;
 }
 
+install_paru() {
+    cd /tmp
+    sudo pacman -S --needed --noconfirm base-devel
+    git clone https://aur.archlinux.org/paru.git
+    cd paru
+    makepkg -si --noconfirm
+    cd /tmp
+    rm -rf paru
+}
+
+install_rust() {
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh 
+}
+
 aur_check() {
     qm=$(pacman -Qm | awk '{print $1}')
     for arg in "$@"
     do
-        if [[ "$qm" != *"$arg"* ]]; then
-            yay --noconfirm -S "$arg" &>> /tmp/aur_install \
+        if [ "$arg" = "rust" ]; then
+            install_rust
+        elif [[ "$qm" != *"$arg"* ]]; then
+            paru --noconfirm -S "$arg" &>> /tmp/aur_install \
             || aur_install "$arg" &>> /tmp/aur_install
         fi
     done
 }
 
-cd /tmp
-dialog --infobox "Installing \"Yay\", an AUR helper..." 10 60
-aur_check yay
+dialog --infobox "Installing \"Paru\", an AUR helper..." 10 60
+install_paru
 count=$(wc -l < /tmp/aur_queue)
 c=0
 
