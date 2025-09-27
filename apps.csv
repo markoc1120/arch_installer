@@ -44,3 +44,4 @@ ghostty, ghostty, modern terminal emulator
 ghostty,kitty,terminal emulator -> displaying images in the terminal
 brave,brave-bin,Brave browser (AUR)
 discord,discord-canary, discord (AUR)
+rust,,
